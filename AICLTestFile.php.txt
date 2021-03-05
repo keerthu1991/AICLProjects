@@ -1,9 +1,0 @@
-<html>
-<head><h1>First PHP</h1>
-<body>
-<?PHP
-print "First PHP Program."
-?>
-</body>
-
-</html>
