@@ -16,7 +16,7 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 //inserting data into table created from the form
-$sql = "INSERT INTO UsersProfile (firstname, lastname, email,contact,messagetext)
+$sql = "INSERT INTO UsersProfile (firstname, lastname, email, contact, messagetext)
 VALUES ('$firstName','$lastName','$emailId','$contact','$messagetxt')";
 
 if ($conn->query($sql) === TRUE) {

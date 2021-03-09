@@ -2,7 +2,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "myDB";
+$dbname = "aiclDB";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -11,8 +11,8 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 //insering data into table created
-$sql = "INSERT INTO MyGuests (firstname, lastname, email)
-VALUES ('John', 'Doe', 'john@example.com')";
+$sql = "INSERT INTO AiclTable (firstname, lastname, email,contact)
+VALUES ('John', 'Doe', 'john@example.com',9564123000)";
 
 if ($conn->query($sql) === TRUE) {
   echo "New record created successfully";
