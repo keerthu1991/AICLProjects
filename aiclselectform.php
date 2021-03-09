@@ -1,8 +1,8 @@
-<?php
+  <?php
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "aiclDB";
+$dbname = "AICLformDB";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -11,15 +11,18 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT firstname FROM AiclTable";
+$sql = "SELECT * FROM AICLformTable";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
   // output data of each row
   while($row = $result->fetch_assoc()) {
-    //echo "id: " . $row["id"]. " - Firstname: " . $row["firstname"]. " - Lastname:  " . $row["lastname"]. " - Contact:  ".$row["contact"]."<br>";
-    echo "Firstname:".$row["firstname"]."<br>";
-    //echo "<table><th>"
+    echo "<table border='1'>";
+    echo"<tr><th>Firstname</th><th>Contact</th><th>Message</th></tr>";
+    echo "<tr><td>" . $row['firstname'] . "</td>";
+    echo "<td>" . $row['contact'] . "</td>";
+    echo "<td>" . $row['messagetext'] . "</td></tr>";
+    echo "</table>";
   }
 } else {
   echo "0 results";
