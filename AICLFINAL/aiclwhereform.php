@@ -2,7 +2,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "AICLformDB";
+$dbname = "AICLform_DB";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -11,7 +11,7 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 $contact=$_GET['Contact'];
-$sql = "SELECT firstname,contact, messagetext FROM AICLformTable WHERE contact='$contact'";
+$sql = "SELECT firstname,contact, messagetext FROM AICLform_Table WHERE contact='$contact'";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
