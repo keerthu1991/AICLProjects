@@ -7,6 +7,8 @@ $dbname = "AICLformDB";
 $firstName = $_POST['firstName'];
 $contact=$_POST['Contact'];
 $messagetxt=$_POST['Message'];
+//$lastName=$_POST['lastName'];
+//$eMail=$_POST['eMail'];
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
